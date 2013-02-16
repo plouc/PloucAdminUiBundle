@@ -1,0 +1,16 @@
+@import "variables";
+
+//
+// FORM
+//
+fieldset {
+  border: none;
+  padding: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  background: $formFieldBg;
+  border: $formFieldBorder;
+  border-radius: $baseBorderRadius;
+}

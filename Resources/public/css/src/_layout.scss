@@ -1,0 +1,86 @@
+@import "variables";
+
+//
+// LAYOUT
+//
+body {
+  background: $mainBackground;
+  font-size: $baseFontSize;
+  color: $baseColor;
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+.admin-page {
+  position: absolute;
+  top:    $pageSpacingTop;
+  right:  $pageSpacingRight;
+  bottom: $pageSpacingBottom;
+  left:   $pageSpacingLeft;
+  padding: $headerHeight $contentPadding $footerHeight $contentPadding;
+  background: $backgroundColor;
+  box-shadow: $pageShadow;
+  overflow: auto;
+}
+.admin-header {
+  position: fixed;
+  top:   $pageSpacingTop;
+  right: $pageSpacingRight;
+  left:  $pageSpacingLeft;
+  height:      $headerHeight;
+  line-height: $headerHeight;
+  background: $headerBackground;
+  z-index: 1000;
+  padding: 0 $contentPadding;
+  color: $headerColor;
+  a {
+    color: $headerColor;
+  }
+}
+.admin-footer {
+  padding: 0 $contentPadding;
+  position: fixed;
+  right:  $pageSpacingRight;
+  bottom: $pageSpacingBottom;
+  left:   $pageSpacingLeft;
+  height:      $footerHeight - 1px;
+  line-height: $footerHeight - 1px;
+  border-top: 1px solid $backgroundColor;
+  background: $footerBg;
+  font-size: $footerFontSize;
+  color: $footerColor;
+  z-index: 1000;
+  a {
+    color: $footerColor;
+  }
+}
+
+
+.admin-dashboard-group {
+  > h2 {
+    position: relative;
+    background: $groupHeaderBg;
+    color:      $groupHeaderColor;
+    padding: 9px 13px;
+    margin-bottom: 13px;
+    font-size: $fontSizeLarge;
+    &:after {
+    	top: 100%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width:  0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(0,0,0,0);
+    	border-top-color: $groupHeaderBg;
+    	border-width: 9px;
+    	left: 50%;
+    	margin-left: -30px;
+    }
+  }
+  table {
+    margin-top: 0;
+    width: 100%;
+    background: $groupContentBackground;
+    color:      $groupContentColor;
+  }
+}

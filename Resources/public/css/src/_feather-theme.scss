@@ -1,0 +1,74 @@
+// generic
+$baseBorderRadius: 2px;
+$baseLineHeight:   30px;
+$baseColor:        #333;
+
+// font
+$baseFontSize:   15px;
+$fontSizeSmall:  13px;
+$fontSizeMini:   11px;
+$fontSizeLarge:  19px;
+$fontSizeXLarge: 23px;
+
+// layout
+$mainBackground:      #fff;
+$backgroundColor:     #fff;
+$backgroundColorDark: #000;
+$pageSpacingTop:      0;
+$pageSpacingRight:    50px;
+$pageSpacingBottom:   0;
+$pageSpacingLeft:     50px;
+$contentPadding:      20px;
+$pageShadow:          0 0 3px rgba(0, 0, 0, 0.25);
+
+// header
+$headerHeight:     50px;
+$headerBackground: #eee;
+$headerColor:      $baseColor;
+
+// footer
+$footerHeight:   36px;
+$footerBg:       $headerBackground;
+$footerColor:    $backgroundColor;
+$footerFontSize: $fontSizeSmall;
+
+// group
+$groupHeaderBg:          $headerBackground;
+$groupHeaderColor:       $headerColor;
+$groupContentBackground: $backgroundColorDark;
+$groupContentColor:      $backgroundColor;
+
+// links
+$linkColor:    $baseColor;
+$linkColorAlt: $baseColor;
+
+// breadcrumb
+$breadcrumbHeight:    30px;
+$breadcrumbBg:        $headerBackground;
+$breadcrumbColor:     $baseColor;
+$breadcrumbLinkColor: $baseColor;
+$breadcrumbSepColor:  $baseColor;
+
+
+// tables
+$tableHeadBg:       $headerBackground;
+$tableHeadColor:    $baseColor;
+$tableBg:           $backgroundColor;
+$tableColor:        $baseColor;
+$tableLinkColor:    $baseColor;
+$tableBorderColor:  $headerBackground;
+$tableBtnBg:        $backgroundColor;
+$tableBtnColor:     $baseColor;
+
+// buttons
+$buttonBackground: $headerBackground;
+
+// form
+$formFieldBg:     #fff;
+$formFieldBorder: 1px solid darken($backgroundColor, 15);
+
+// pagination
+$paginationBg:        $headerBackground;
+$paginationHeight:    30px;
+$paginationItemBg:    $backgroundColor;
+$paginationLinkColor: $baseColor;

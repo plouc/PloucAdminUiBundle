@@ -1,0 +1,51 @@
+@import "variables";
+
+//
+// PAGINATION
+//
+.pagination {
+  position: relative;
+  height:      $paginationHeight;
+  line-height: $paginationHeight;
+  background: $paginationBg;
+  text-align: center;
+  font-size: $fontSizeSmall;
+  border-top:    3px solid $paginationBg;
+  border-bottom: 3px solid $paginationBg;
+  .pagination-infos {
+    position: absolute;
+    top:  0;
+    left: 0;
+    padding: 0 13px;
+  }
+  .pagination-config {
+    position: absolute;
+    top:   0;
+    right: 0;
+    padding: 0 13px;
+  }
+  ul {
+    display: inline-block;
+    margin: 0;
+    > li {
+      display: inline;
+      a, span {
+        float: left;
+        padding: 0 13px;
+        margin-left: 1px;
+        background: $paginationItemBg;
+      }
+      a {
+        color: $paginationLinkColor;
+      }
+      &.pagination-current a {
+        font-weight: bold;
+      }
+      &.pagination-first a,
+      &.pagination-prev a,
+      &.pagination-next a,
+      &.pagination-last a {
+      }
+    }
+  }
+}

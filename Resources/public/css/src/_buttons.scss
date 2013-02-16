@@ -1,0 +1,36 @@
+@import "variables";
+
+//
+// BUTTONS
+//
+.btn {
+  border-radius: $baseBorderRadius;
+  border: 0 none;
+  font-size: $fontSizeSmall;
+  display: inline-block;
+  background-color: $buttonBackground;
+  height:      26px;
+  line-height: 26px;
+  font-weight: normal;
+  padding: 0 13px;
+  margin: 0;
+}
+.btn-group {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0;
+  .btn {
+    border-left: none;
+    border-radius: 0;
+    margin-left: 1px;
+  }
+  .btn:first-child {
+    margin-left: 0;
+    border-top-left-radius:    $baseBorderRadius;
+    border-bottom-left-radius: $baseBorderRadius;
+  }
+  .btn:last-child {
+    border-top-right-radius:    $baseBorderRadius;
+    border-bottom-right-radius: $baseBorderRadius;
+  }
+}

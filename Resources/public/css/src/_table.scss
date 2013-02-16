@@ -1,0 +1,40 @@
+@import "variables";
+
+//
+// TABLE
+//
+table {
+  margin: 12px 0;
+  font-size: $fontSizeSmall;
+  background-color: $tableBg;
+  color: $tableColor;
+  th {
+    padding: 13px 13px;
+    text-align: left;
+    font-weight: normal;
+    background-color: $tableHeadBg;
+    color: $tableHeadColor;
+    a {
+      color: $tableHeadColor;
+    }
+  }
+  td {
+    padding: 9px 13px;
+    border-top: 1px solid $tableBorderColor;
+    a {
+      color: $tableLinkColor;
+    }
+  }
+  .btn {
+    background: $tableBtnBg;
+    color:      $tableBtnColor;
+  }
+  .btn-group {
+    .btn {
+    }
+  }
+  &.admin-list-table {
+    margin-top: 0;
+    width: 75%;
+  }
+}

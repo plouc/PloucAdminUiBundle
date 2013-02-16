@@ -1,0 +1,82 @@
+// generic
+$baseBorderRadius: 2px;
+$baseLineHeight:   30px;
+
+// font
+$baseFontSize:   15px;
+$fontSizeSmall:  13px;
+$fontSizeMini:   11px;
+$fontSizeLarge:  19px;
+$fontSizeXLarge: 23px;
+
+// layout
+$mainBackground:      #272d2f url("../imgs/background-pattern.gif") repeat top left;
+$backgroundColor:     #f3e9dc;
+$backgroundLight:     #fff;
+$backgroundColorDark: #2f343a;
+$pageSpacingTop:      20px;
+$pageSpacingRight:    40px;
+$pageSpacingBottom:   20px;
+$pageSpacingLeft:     40px;
+$contentPadding:      20px;
+$pageShadow:          0 0 5px rgba(0, 0, 0, 0.75);
+
+// header
+$headerHeight:     50px;
+$headerBackground: #8ac8b9;
+$headerColor:      $backgroundColor;
+
+// footer
+$footerHeight:   36px;
+$footerBg:       $backgroundColorDark;
+$footerColor:    $backgroundColor;
+$footerFontSize: $fontSizeSmall;
+
+// group
+$groupHeaderBg:          $headerBackground;
+$groupHeaderColor:       $headerColor;
+$groupContentBackground: $backgroundColorDark;
+$groupContentColor:      $backgroundColor;
+
+$baseColor: #272d2f;
+
+// links
+$linkColor:    #3ba38f;
+$linkColorAlt: #43d1bd;
+
+// breadcrumb
+$breadcrumbHeight:    30px;
+$breadcrumbBg:        $backgroundColorDark;
+$breadcrumbColor:     $backgroundColor;
+$breadcrumbLinkColor: $linkColor;
+$breadcrumbSepColor:  lighten($backgroundColorDark, 15);
+
+// tables
+$tableHeadBg:      $headerBackground;
+$tableHeadColor:   $backgroundColor;
+$tableBg:          $backgroundColorDark;
+$tableColor:       $backgroundColor;
+$tableLinkColor:   $headerBackground;
+$tableBorderColor: lighten($backgroundColorDark, 3);
+$tableBtnBg:       $backgroundColor;
+$tableBtnColor:    $linkColor;
+
+// buttons
+$buttonBackground: #fff;
+
+// form
+$formFieldBg:     #fff;
+$formFieldBorder: 1px solid darken($backgroundColor, 15);
+
+// pagination
+$paginationBg:        lighten($backgroundColor, 5);
+$paginationHeight:    30px;
+$paginationItemBg:    $backgroundColor;
+$paginationLinkColor: lighten($backgroundColorDark, 15);
+
+// dropdown
+$dropdownBg:      #fff;
+$dropdownPadding: 3px 0;
+$dropdownShadow:  0 1px 5px rgba(0, 0, 0, 0.25);
+
+// filters
