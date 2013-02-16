@@ -10,9 +10,28 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  z-index: 1000;
+  left:  0;
+  right: 0;
+  z-index: 2000;
+  margin: 3px 0 0 0;
+  padding: 5px 0;
+  border: $dropdownBorder;
   border-radius: $baseBorderRadius;
   background: $dropdownBg;
   box-shadow: $dropdownShadow;
+  line-height: $dropdownItemHeight;
+  a {
+    display: block;
+    padding: 0 $dropdownHPadding;
+    clear: both;
+    font-weight: normal;
+    color: #333333;
+    white-space: nowrap;
+    &:hover {
+      background: $dropdownHoverBg;
+    }
+    &.selected {
+      background: $dropdownSelectedBg;
+    }
+  }
 }

@@ -5,11 +5,12 @@
 //
 table {
   margin: 12px 0;
-  font-size: $fontSizeSmall;
   background-color: $tableBg;
-  color: $tableColor;
+  color:            $tableColor;
+  th, td {
+    padding: 9px 13px;
+  }
   th {
-    padding: 13px 13px;
     text-align: left;
     font-weight: normal;
     background-color: $tableHeadBg;
@@ -19,7 +20,6 @@ table {
     }
   }
   td {
-    padding: 9px 13px;
     border-top: 1px solid $tableBorderColor;
     a {
       color: $tableLinkColor;

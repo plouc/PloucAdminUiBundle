@@ -1,13 +1,23 @@
 $(document).ready(function() {
 
+  function closeDropdowns() {
+    $('.dropdown-menu').css('display', 'none');
+  }
+
+  $('html').on('click', function () {
+    closeDropdowns();
+  });
+
   // convert filter type select to dropdown
   $('.admin-filter-container select.filter').each(function() {
-    var $select         = $(this),
-        $options        = $select.find('option'),
-        $dropDown       = $('<ul class="dropdown-menu"/>'),
-        $dropdownButton = $('<a class="dropdown-toggle"><span class="caret"></span><span class="text"></span></a>');
+    var $select          = $(this),
+        $options         = $select.find('option'),
+        $dropDown        = $('<ul class="dropdown-menu"/>'),
+        $filterTypeLabel = $('<span class="admin-filter-type-label"></span>'),
+        $dropdownButton  = $('<a class="dropdown-toggle"><span class="caret"></span></a>');
 
-    $dropdownButton.find('.text').text($select.find(':selected').text());
+    $filterTypeLabel.text($select.find(':selected').text());
+    $select.parent().find('label').after($filterTypeLabel);
     $select.parent().find('label').after($dropdownButton);
     $select.parent().find('label').after($dropDown);
 
@@ -22,15 +32,18 @@ $(document).ready(function() {
         e.preventDefault();
         $options.removeAttr('selected');
         $option.attr('selected', 'selected');
-        $dropdownButton.find('.text').text($option.text());
-        $dropDown.find('a').removeClass('active');
-        $(e.currentTarget).addClass('active');
+        $filterTypeLabel.text($option.text());
+        $dropDown.find('a').removeClass('selected');
+        $(e.currentTarget).addClass('selected');
       });
     });
 
-    $dropdownButton.dropdown();
+    $dropdownButton.on('click', function(e) {
+      e.stopPropagation();
+      $dropDown.css('display', 'block');
+    });
 
     // hide the select form element
-    //$select.css('display', 'none');
+    $select.css('display', 'none');
   });
 });

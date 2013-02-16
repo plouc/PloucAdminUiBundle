@@ -2,13 +2,14 @@
 $baseBorderRadius: 2px;
 $baseLineHeight:   30px;
 $baseColor:        #272d2f;
+$caretSize:        5px;
 
 // font
-$baseFontSize:   15px;
-$fontSizeSmall:  13px;
-$fontSizeMini:   11px;
-$fontSizeLarge:  19px;
-$fontSizeXLarge: 23px;
+$fontSizeMini:   9px;
+$fontSizeSmall:  11px;
+$baseFontSize:   13px;
+$fontSizeLarge:  17px;
+$fontSizeXLarge: 21px;
 
 // layout
 $mainBackground:      #272d2f url("../imgs/background-pattern.gif") repeat top left;
@@ -23,19 +24,19 @@ $contentPadding:      20px;
 $pageShadow:          0 0 5px rgba(0, 0, 0, 0.75);
 
 // header
-$headerHeight:     50px;
-$headerBackground: #8ac8b9;
-$headerColor:      #fff;
+$headerHeight: 50px;
+$headerBg:     #8ac8b9;
+$headerColor:  #fff;
 
 // footer
 $footerHeight:    36px;
 $footerBg:        $backgroundColorDark;
 $footerColor:     $backgroundColor;
 $footerLinkColor: $footerColor;
-$footerFontSize:  $fontSizeSmall;
+$footerFontSize:  $baseFontSize;
 
 // group
-$groupHeaderBg:          $headerBackground;
+$groupHeaderBg:          $headerBg;
 $groupHeaderColor:       $headerColor;
 $groupContentBackground: $backgroundColorDark;
 $groupContentColor:      $backgroundColor;
@@ -49,16 +50,16 @@ $breadcrumbHeight:    30px;
 $breadcrumbBg:        $backgroundColorDark;
 $breadcrumbColor:     $backgroundColor;
 $breadcrumbLinkColor: $linkColor;
-$breadcrumbSepColor:  lighten($backgroundColorDark, 15);
+$breadcrumbSepColor:  $backgroundColor;
 
 // tables
-$tableHeadBg:      $headerBackground;
+$tableHeadBg:      $headerBg;
 $tableHeadColor:   $backgroundColor;
 $tableBg:          $backgroundColorDark;
 $tableColor:       $backgroundColor;
-$tableLinkColor:   $headerBackground;
+$tableLinkColor:   $headerBg;
 $tableBorderColor: lighten($backgroundColorDark, 3);
-$tableBtnBg:       $backgroundColor;
+$tableBtnBg:       lighten($backgroundColorDark, 7);
 $tableBtnColor:    $linkColor;
 
 // buttons
@@ -66,8 +67,9 @@ $buttonBackground: #fff;
 
 // form
 $formFieldBg:         #fff;
-$formFieldBorder:     1px solid darken($backgroundColor, 15);
-$formElementFontSize: $fontSizeSmall;
+$formFieldBorder:     1px solid desaturate(darken($backgroundColor, 20), 30);
+$formElementFontSize: $baseFontSize;
+$formElementShadow:   0 2px 4px rgba(0, 0, 0, 0.12) inset;
 
 // pagination
 $paginationBg:           lighten($backgroundColor, 5);
@@ -77,12 +79,19 @@ $paginationLinkColor:    lighten($backgroundColorDark, 15);
 $paginationCurrentColor: $backgroundColorDark;
 
 // dropdown
-$dropdownBg:      #fff;
-$dropdownPadding: 3px 0;
-$dropdownShadow:  0 1px 5px rgba(0, 0, 0, 0.25);
+$dropdownBg:         rgba(255, 255, 255, 0.95);
+$dropdownPadding:    3px 0;
+$dropdownBorder:     none;
+$dropdownItemHeight: 26px;
+$dropdownHPadding:   13px;
+$dropdownShadow:     0 2px 9px rgba(0, 0, 0, 0.5);
+$dropdownHoverBg:    lighten($headerBg, 25);
+$dropdownSelectedBg: lighten($headerBg, 10);
 
 // filter
-$filterHeadBg:     $headerBackground;
-$filterHeadColor:  $headerColor;
-$filterLabelBg:    $headerBackground;
-$filterLabelColor: $headerColor;
+$filterHeadBg:      $headerBg;
+$filterHeadColor:   $headerColor;
+$filterLabelHeight: 26px;
+$filterLabelBg:     $headerBg;
+$filterLabelColor:  $headerColor;
+$filterLabelBorder: 1px solid darken($headerBg, 12);

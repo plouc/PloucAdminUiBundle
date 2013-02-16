@@ -27,7 +27,7 @@ body {
   left:  $pageSpacingLeft;
   height:      $headerHeight;
   line-height: $headerHeight;
-  background: $headerBackground;
+  background: $headerBg;
   z-index: 1000;
   padding: 0 $contentPadding;
   color: $headerColor;

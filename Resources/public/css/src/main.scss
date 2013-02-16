@@ -11,33 +11,11 @@
 .brand img {
   display: none;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  font-size: $baseFontSize;
-}
-h1 {
-  font-size: $fontSizeXLarge;
-  position: relative;
-  > .btn-group,
-  > .btn {
-    position: absolute;
-    top: 0;
-    margin-left: 13px;
-  }
-}
-ul {
-  list-style: none;
-  padding: 0;
-}
-a {
-  color: $linkColor;
-  text-decoration: none;
-  &:hover {
-    color: $linkColorAlt;
-  }
+.brand {
+  font-size: $fontSizeLarge;
 }
 
+@import "common";
 @import "layout";
 @import "dropdown";
 @import "form";

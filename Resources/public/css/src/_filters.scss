@@ -14,10 +14,13 @@
   display: block;
   width: 100%;
   padding: 9px 13px;
-  box-sizing: border-box;
   background: $filterHeadBg;
   color:      $headerColor;
-  margin-bottom: 13px;
+  font-size: $fontSizeLarge;
+  margin-bottom: 19px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   &:after {
   	top: 100%;
   	border: solid transparent;
@@ -37,27 +40,57 @@
   position: relative;
   margin-bottom: 13px;
   .admin-filter-label {
+    position: relative;
     display: block;
+    border: $filterLabelBorder;
+    //border-bottom: none;
+    border-top-left-radius:  $baseBorderRadius;
+    border-top-right-radius: $baseBorderRadius;
+    height:      $filterLabelHeight;
+    line-height: $filterLabelHeight;
+    background: $filterLabelBg;
+    label,
+    .dropdown-toggle,
+    .admin-filter-type-label {
+      color:      $filterLabelColor;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
     label {
       float: left;
-      font-size: $fontSizeSmall;
       display: block;
-      height:      26px;
-      line-height: 26px;
+      height: $filterLabelHeight;
       padding: 0 13px;
-      background: $filterLabelBg;
-      color:      $filterLabelColor;
       border-top-left-radius: $baseBorderRadius;
     }
     .dropdown-toggle {
+      cursor: pointer;
       float: left;
       display: block;
-      width: 20px;
-      height: 26px;
-      background: $filterLabelBg;
+      width: 10%;
+      text-align: center;
+      height: $filterLabelHeight;
+      border-left:  $filterLabelBorder;
+      .caret {
+        border-top-color: $filterLabelColor;
+        margin-top: $filterLabelHeight / 2 - $caretSize / 2;
+      }
+    }
+    .admin-filter-type-label {
+      float: left;
+      height: $filterLabelHeight;
+      padding: 0;
+      width: 40%;
+      white-space: pre;
     }
   }
   .admin-filter-element {
     width: 100%;
+  }
+  input[type="text"] {
+    border-top: none;
+    border-top-left-radius:  0;
+    border-top-right-radius: 0;
   }
 }
