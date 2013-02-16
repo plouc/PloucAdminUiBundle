@@ -45,14 +45,18 @@ body {
   line-height: $footerHeight - 1px;
   border-top: 1px solid $backgroundColor;
   background: $footerBg;
+  color:      $footerColor;
   font-size: $footerFontSize;
-  color: $footerColor;
   z-index: 1000;
   a {
-    color: $footerColor;
+    color: $footerLinkColor;
   }
 }
 
+.admin-content {
+  float: left;
+  width: 75%;
+}
 
 .admin-dashboard-group {
   > h2 {

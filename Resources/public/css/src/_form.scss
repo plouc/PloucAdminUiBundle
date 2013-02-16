@@ -10,7 +10,13 @@ fieldset {
 input[type="text"],
 input[type="password"],
 textarea {
+  box-sizing: border-box;
+  padding: 7px 9px;
   background: $formFieldBg;
   border: $formFieldBorder;
   border-radius: $baseBorderRadius;
+  font-size: $formElementFontSize;
+  &:focus {
+    outline: none;
+  }
 }

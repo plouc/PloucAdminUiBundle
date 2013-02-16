@@ -3,6 +3,61 @@
 //
 // FILTERS
 //
-.admin-filters {
-
+.admin-filter {
+  float: right;
+  width: 23%;
+}
+.admin-filter-container {
+}
+.admin-filter-legend {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 9px 13px;
+  box-sizing: border-box;
+  background: $filterHeadBg;
+  color:      $headerColor;
+  margin-bottom: 13px;
+  &:after {
+  	top: 100%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width:  0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-color: rgba(0,0,0,0);
+  	border-top-color: $groupHeaderBg;
+  	border-width: 9px;
+  	left: 50%;
+  	margin-left: -30px;
+  }
+}
+.admin-filter-group {
+  position: relative;
+  margin-bottom: 13px;
+  .admin-filter-label {
+    display: block;
+    label {
+      float: left;
+      font-size: $fontSizeSmall;
+      display: block;
+      height:      26px;
+      line-height: 26px;
+      padding: 0 13px;
+      background: $filterLabelBg;
+      color:      $filterLabelColor;
+      border-top-left-radius: $baseBorderRadius;
+    }
+    .dropdown-toggle {
+      float: left;
+      display: block;
+      width: 20px;
+      height: 26px;
+      background: $filterLabelBg;
+    }
+  }
+  .admin-filter-element {
+    width: 100%;
+  }
 }

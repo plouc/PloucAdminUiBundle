@@ -40,6 +40,7 @@
       }
       &.pagination-current a {
         font-weight: bold;
+        color: $paginationCurrentColor;
       }
       &.pagination-first a,
       &.pagination-prev a,

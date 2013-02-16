@@ -59,9 +59,9 @@ body {
   background: #8ac8b9;
   z-index: 1000;
   padding: 0 20px;
-  color: #f3e9dc; }
+  color: white; }
   .admin-header a {
-    color: #f3e9dc; }
+    color: white; }
 
 .admin-footer {
   padding: 0 20px;
@@ -73,16 +73,20 @@ body {
   line-height: 35px;
   border-top: 1px solid #f3e9dc;
   background: #2f343a;
-  font-size: 13px;
   color: #f3e9dc;
+  font-size: 13px;
   z-index: 1000; }
   .admin-footer a {
     color: #f3e9dc; }
 
+.admin-content {
+  float: left;
+  width: 75%; }
+
 .admin-dashboard-group > h2 {
   position: relative;
   background: #8ac8b9;
-  color: #f3e9dc;
+  color: white;
   padding: 9px 13px;
   margin-bottom: 13px;
   font-size: 19px; }
@@ -109,6 +113,7 @@ body {
   position: relative; }
 
 .dropdown-menu {
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -124,9 +129,16 @@ fieldset {
 input[type="text"],
 input[type="password"],
 textarea {
+  box-sizing: border-box;
+  padding: 7px 9px;
   background: white;
   border: 1px solid #dfc5a3;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-size: 13px; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  textarea:focus {
+    outline: none; }
 
 .btn {
   border-radius: 2px;
@@ -204,7 +216,59 @@ textarea {
       .pagination ul > li a {
         color: #515a64; }
       .pagination ul > li.pagination-current a {
-        font-weight: bold; }
+        font-weight: bold;
+        color: #2f343a; }
+
+.admin-filter {
+  float: right;
+  width: 23%; }
+
+.admin-filter-legend {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 9px 13px;
+  box-sizing: border-box;
+  background: #8ac8b9;
+  color: white;
+  margin-bottom: 13px; }
+  .admin-filter-legend:after {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #8ac8b9;
+    border-width: 9px;
+    left: 50%;
+    margin-left: -30px; }
+
+.admin-filter-group {
+  position: relative;
+  margin-bottom: 13px; }
+  .admin-filter-group .admin-filter-label {
+    display: block; }
+    .admin-filter-group .admin-filter-label label {
+      float: left;
+      font-size: 13px;
+      display: block;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 13px;
+      background: #8ac8b9;
+      color: white;
+      border-top-left-radius: 2px; }
+    .admin-filter-group .admin-filter-label .dropdown-toggle {
+      float: left;
+      display: block;
+      width: 20px;
+      height: 26px;
+      background: #8ac8b9; }
+  .admin-filter-group .admin-filter-element {
+    width: 100%; }
 
 table {
   margin: 12px 0;
@@ -229,4 +293,4 @@ table {
     color: #3ba38f; }
   table.admin-list-table {
     margin-top: 0;
-    width: 75%; }
+    width: 100%; }

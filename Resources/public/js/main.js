@@ -1,14 +1,11 @@
 $(document).ready(function() {
 
-  // disable toggle
-  jQuery('fieldset.filter_legend').off('click');
-
   // convert filter type select to dropdown
-  $('.filter_container select.filter').each(function() {
+  $('.admin-filter-container select.filter').each(function() {
     var $select         = $(this),
         $options        = $select.find('option'),
         $dropDown       = $('<ul class="dropdown-menu"/>'),
-        $dropdownButton = $('<a class="btn dropdown-toggle"><span class="caret"></span><span class="text"></span></a>');
+        $dropdownButton = $('<a class="dropdown-toggle"><span class="caret"></span><span class="text"></span></a>');
 
     $dropdownButton.find('.text').text($select.find(':selected').text());
     $select.parent().find('label').after($dropdownButton);
@@ -34,6 +31,6 @@ $(document).ready(function() {
     $dropdownButton.dropdown();
 
     // hide the select form element
-    $select.css('display', 'none');
+    //$select.css('display', 'none');
   });
 });

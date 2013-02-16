@@ -132,18 +132,18 @@ file that was distributed with this source code.
 
 {% block list_filters %}
     {% if admin.datagrid.filters %}
-        <form class="sonata-filter-form {{ admin.isChild and 1 == admin.datagrid.filters|length ? 'hide' : '' }}" action="{{ admin.generateUrl('list') }}" method="GET">
-            <fieldset class="filter_legend">
-                <legend class="filter_legend">{{ 'label_filters'|trans({}, 'SonataAdminBundle') }}</legend>
+        <form class="admin-filter-form {{ admin.isChild and 1 == admin.datagrid.filters|length ? 'hide' : '' }}" action="{{ admin.generateUrl('list') }}" method="GET">
+            <fieldset>
+                <legend class="admin-filter-legend">{{ 'label_filters'|trans({}, 'SonataAdminBundle') }}</legend>
 
-                <div class="filter_container">
+                <div class="admin-filter-container">
                     {% for filter in admin.datagrid.filters %}
-                    <div class="filter-group">
-                        <span class="filter-label">
-                            <label class="btn filter-title">{{ admin.trans(filter.label) }}</label>
+                    <div class="admin-filter-group">
+                        <span class="admin-filter-label">
+                            <label class="filter-title">{{ admin.trans(filter.label) }}</label>
                             {{ form_widget(form.children[filter.formName].children['type'], { 'attr': {'class': 'filter'} }) }}
                         </span>
-                        {{ form_widget(form.children[filter.formName].children['value']) }}
+                        {{ form_widget(form.children[filter.formName].children['value'], { 'attr': {'class': 'admin-filter-element'} }) }}
                     </div>
                     {% endfor %}
 

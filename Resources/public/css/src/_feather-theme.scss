@@ -27,10 +27,11 @@ $headerBackground: #eee;
 $headerColor:      $baseColor;
 
 // footer
-$footerHeight:   36px;
-$footerBg:       $headerBackground;
-$footerColor:    $backgroundColor;
-$footerFontSize: $fontSizeSmall;
+$footerHeight:    36px;
+$footerBg:        $headerBackground;
+$footerColor:     $backgroundColor;
+$footerLinkColor: $footerColor;
+$footerFontSize:  $fontSizeSmall;
 
 // group
 $groupHeaderBg:          $headerBackground;
@@ -49,7 +50,6 @@ $breadcrumbColor:     $baseColor;
 $breadcrumbLinkColor: $baseColor;
 $breadcrumbSepColor:  $baseColor;
 
-
 // tables
 $tableHeadBg:       $headerBackground;
 $tableHeadColor:    $baseColor;
@@ -64,11 +64,24 @@ $tableBtnColor:     $baseColor;
 $buttonBackground: $headerBackground;
 
 // form
-$formFieldBg:     #fff;
-$formFieldBorder: 1px solid darken($backgroundColor, 15);
+$formFieldBg:         #fff;
+$formFieldBorder:     1px solid darken($backgroundColor, 15);
+$formElementFontSize: $fontSizeSmall;
 
 // pagination
-$paginationBg:        $headerBackground;
-$paginationHeight:    30px;
-$paginationItemBg:    $backgroundColor;
-$paginationLinkColor: $baseColor;
+$paginationBg:           $headerBackground;
+$paginationHeight:       30px;
+$paginationItemBg:       $backgroundColor;
+$paginationLinkColor:    $baseColor;
+$paginationCurrentColor: $baseColor;
+
+// dropdown
+$dropdownBg:      #fff;
+$dropdownPadding: 3px 0;
+$dropdownShadow:  0 1px 5px rgba(0, 0, 0, 0.25);
+
+// filter
+$filterHeadBg:     $headerBackground;
+$filterHeadColor:  $headerColor;
+$filterLabelBg:    $headerBackground;
+$filterLabelColor: $headerColor;
